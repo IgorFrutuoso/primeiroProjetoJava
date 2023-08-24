@@ -1,12 +1,15 @@
 package br.com.banco;
+import java.time.LocalDateTime;
 
 public class Conta {
 	
-	public int numero; 
+	private int numero; 
 	
-	public int agencia; 
+	private int agencia; 
 	
-	public double saldo;
+	private double saldo;
+
+	public LocalDateTime dataAbertura = LocalDateTime.now();
 	
 	Cliente cliente = new Cliente();
 	
@@ -19,15 +22,19 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
-	public void retirar(int valor) {
+	public void retirar(double valor) {
 		this.saldo -= valor;
 	}
 	
-	public void depositar(int valor) {
+	public void depositar(double valor) {
 		this.saldo += valor;
 	}
 	
 	public double verificarSaldo() {
 		return saldo;
+	}
+
+	public LocalDateTime verificarDataAbertura() {
+		return dataAbertura;
 	}
 }
