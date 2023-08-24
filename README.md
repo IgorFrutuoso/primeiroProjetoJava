@@ -1,2 +1,2 @@
 # primeiroProjetoJava
- meu primeiro projeto feito junto ao curso
+ meu primeiro projeto de um software para um banco.
